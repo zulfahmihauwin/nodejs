@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('oder_details', {
+    await queryInterface.createTable('order_details', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -19,7 +19,7 @@ module.exports = {
         type: Sequelize.DECIMAL
       },
       quantity: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGERs
       },
       subtotal: {
         type: Sequelize.DECIMAL
@@ -37,6 +37,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('oder_details');
+    await queryInterface.dropTable('order_details');
   }
 };

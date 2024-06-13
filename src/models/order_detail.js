@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     subtotal: DataTypes.DECIMAL
   }, {
     sequelize,
-    modelName: 'oder_detail',
+    modelName: 'order_detail',
     underscored: true,
   });
   return oder_detail;
